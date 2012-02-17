@@ -1,0 +1,25 @@
+<h1>Listing postts</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @postts.each do |postt| %>
+  <tr>
+    <td><%= postt.title %></td>
+    <td><%= postt.content %></td>
+    <td><%= link_to 'Show', postt %></td>
+    <td><%= link_to 'Edit', edit_postt_path(postt) %></td>
+    <td><%= link_to 'Destroy', postt, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Postt', new_postt_path %>

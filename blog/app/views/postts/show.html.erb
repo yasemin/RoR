@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @postt.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @postt.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_postt_path(@postt) %> |
+<%= link_to 'Back', postts_path %>
